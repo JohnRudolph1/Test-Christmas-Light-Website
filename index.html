@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- SEO: Update the title below if target city or primary keywords change -->
-  <title>Christmas Light Installation St. Louis, MO | Holiday Lighting Company | GlowPro STL</title>
+  <title>Christmas Light Installation St. Louis, MO | Holiday Light Installers | GlowPro STL</title>
   <!-- SEO: Update the meta description below if service offers or service area change -->
-  <meta name="description" content="GlowPro STL provides premium Christmas light installation in St. Louis, MO for homes and businesses. Custom holiday lighting design, installation, maintenance, takedown, and storage options. Call 314-677-5011 for a free quote.">
+  <meta name="description" content="Professional Christmas light installation in St. Louis, MO for homes and businesses. GlowPro STL provides custom holiday lighting design, installation, maintenance, takedown, and storage options. Call 314-677-5011 for a free quote.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="GlowPro STL">
   <meta name="theme-color" content="#0e342a">
@@ -21,10 +21,13 @@
   <meta property="og:url" content="https://glowprostl.com/">
   <meta property="og:site_name" content="GlowPro STL">
   <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://glowprostl.com/assets/img/og-image.jpg">
+  <meta property="og:image:alt" content="GlowPro STL Christmas light installation in St. Louis, Missouri">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="GlowPro STL | Christmas Light Installation in St. Louis, MO">
   <meta name="twitter:description" content="Premium Christmas light installation in St. Louis for residential and commercial properties. Request a free quote from GlowPro STL.">
+  <meta name="twitter:image" content="https://glowprostl.com/assets/img/og-image.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,9 +43,11 @@
           "@type": "LocalBusiness",
           "@id": "https://glowprostl.com/#business",
           "name": "GlowPro STL",
+          "logo": "https://glowprostl.com/images/newLogo-removebg-preview.png",
           "image": [
             "https://glowprostl.com/assets/img/house4.jpg",
-            "https://glowprostl.com/images/ChikFilA4.jpg"
+            "https://glowprostl.com/images/ChikFilA4.jpg",
+            "https://glowprostl.com/assets/img/og-image.jpg"
           ],
           "url": "https://glowprostl.com/",
           "telephone": "+1-314-677-5011",
@@ -82,8 +87,17 @@
             }
           ],
           "sameAs": [
-            "https://glowprostl.com/"
+            "https://glowprostl.com/",
+            "https://www.facebook.com/profile.php?id=100089183392519",
+            "https://www.instagram.com/glowprostl/"
           ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-314-677-5011",
+            "contactType": "customer service",
+            "areaServed": "St. Louis, MO",
+            "availableLanguage": "English"
+          },
           "knowsAbout": [
             "Christmas light installation in St. Louis",
             "Holiday lighting services in St. Louis, MO",
@@ -95,11 +109,54 @@
           ]
         },
         {
+          "@type": "WebSite",
+          "@id": "https://glowprostl.com/#website",
+          "url": "https://glowprostl.com/",
+          "name": "GlowPro STL",
+          "publisher": {
+            "@id": "https://glowprostl.com/#business"
+          }
+        },
+        {
           "@type": "Service",
           "@id": "https://glowprostl.com/#service",
           "serviceType": "Christmas light installation",
           "provider": {
             "@id": "https://glowprostl.com/#business"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Holiday lighting services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Residential Christmas light installation"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Commercial holiday lighting"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Custom holiday lighting design"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Holiday light takedown service"
+                }
+              }
+            ]
           },
           "areaServed": [
             "St. Louis, MO",
@@ -213,12 +270,25 @@
             <a class="button button-primary" href="#contact">Request a Free Quote</a>
             <a class="button button-secondary" href="#services">Explore Holiday Lighting Services</a>
           </div>
-          <ul class="hero-points" aria-label="GlowPro STL trust points">
-            <li>Residential and commercial lighting</li>
-            <li>Custom-fit holiday display design</li>
-            <li>In-season maintenance support</li>
-            <li>Serving St. Louis and nearby communities</li>
-          </ul>
+          <div class="hero-support-grid">
+            <div class="hero-support-card hero-searches" aria-label="Popular services">
+              <p class="hero-support-label">Popular Services</p>
+              <div class="hero-links">
+                <a href="#services">Residential Christmas light installation</a>
+                <a href="#services">Commercial holiday lighting</a>
+                <a href="#service-area">Christmas light installers near St. Louis</a>
+              </div>
+            </div>
+            <div class="hero-support-card hero-benefits" aria-label="GlowPro STL trust points">
+              <p class="hero-support-label">Why Clients Hire Us</p>
+              <ul class="hero-points">
+                <li>Residential and commercial lighting</li>
+                <li>Custom-fit holiday display design</li>
+                <li>In-season maintenance support</li>
+                <li>Serving St. Louis and nearby communities</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <aside class="hero-panel reveal" aria-label="GlowPro STL highlights">
@@ -252,6 +322,9 @@
           <h2>A professional holiday lighting company built around quality, convenience, and curb appeal</h2>
           <p>
             Homeowners and businesses across St. Louis choose GlowPro STL when they want a display that looks refined, performs reliably, and removes the stress of seasonal setup. Every project is designed to fit the property and installed with a careful, polished finish.
+          </p>
+          <p>
+            If you are comparing Christmas light installers in St. Louis, the difference is usually in the design quality, the cleanliness of the installation, and how reliably the company handles maintenance and takedown. GlowPro STL is built around those details.
           </p>
         </div>
 
@@ -291,6 +364,9 @@
           <h2>Complete residential and commercial Christmas light installation services</h2>
           <p>
             GlowPro STL provides full-service holiday lighting services in St. Louis, MO for homes, storefronts, offices, restaurants, and other commercial properties. Whether you need classic roofline lighting or a larger custom holiday display, we manage the project from design through takedown.
+          </p>
+          <p>
+            Our service mix is designed to match the local search terms people actually use, including Christmas light installation in St. Louis, holiday light hanging service, custom Christmas light design, commercial Christmas light installation, and holiday light takedown service.
           </p>
         </div>
 
@@ -350,7 +426,7 @@
           <article class="process-step reveal">
             <span class="step-number">02</span>
             <h3>Custom design</h3>
-            <p>Your display is planned around the property’s layout, architecture, traffic visibility, and preferred style.</p>
+            <p>Your display is planned around the property's layout, architecture, traffic visibility, and preferred style.</p>
           </article>
           <article class="process-step reveal">
             <span class="step-number">03</span>
@@ -422,17 +498,19 @@
 
         <div class="testimonial-grid">
           <article class="testimonial-card reveal">
-            <p>"GlowPro STL transformed our business into a festive wonderland. The attention to detail and professionalism was evident from start to finish. Our storefront drew in more customers than ever before, thanks to the stunning light display."</p>
+            <p>"GlowPro STL transformed our business into a festive wonderland. The attention to detail and professionalism was evident from start to finish. Our storefront drew in more customers than ever before."</p>
             <h3>Susan R.</h3>
             <span>Commercial Client</span>
           </article>
           <article class="testimonial-card reveal">
             <p>"Our experience with GlowPro STL was exceptional. The team was prompt, courteous, and creative. They turned our home into a holiday centerpiece that had the whole neighborhood talking."</p>
+           
             <h3>Robert H.</h3>
             <span>Residential Client</span>
           </article>
           <article class="testimonial-card reveal">
             <p>"Working with GlowPro STL was hassle-free from the first conversation to the final result. The lights were installed flawlessly, the house looked incredible, and we were already planning for next season."</p>
+            
             <h3>John D.</h3>
             <span>Residential Client</span>
           </article>
@@ -449,7 +527,10 @@
             GlowPro STL provides Christmas light installation in St. Louis and surrounding communities for homeowners, business owners, storefronts, restaurants, and commercial properties that want a more polished holiday presentation.
           </p>
           <p class="area-copy reveal">
-            If you are searching for Christmas light installers near me, holiday light installation near me, or commercial Christmas light installation in the St. Louis area, GlowPro STL is built to serve local clients who want responsive service and professional results.
+            From central St. Louis neighborhoods to surrounding West County and St. Charles communities, we serve local clients who want responsive scheduling, clean installation, and professional holiday lighting results.
+          </p>
+          <p class="area-copy reveal">
+            We regularly help clients searching for Christmas light installation in St. Louis, holiday lighting services in Chesterfield, Christmas light hanging service in Kirkwood, and commercial holiday lighting near St. Charles.
           </p>
         </div>
         <div class="area-card reveal">
@@ -478,6 +559,9 @@
           <h2>A local holiday lighting company focused on quality, safety, and a clean final result</h2>
           <p>
             GlowPro STL helps homeowners and businesses enjoy the impact of professional holiday lighting without the time, risk, or inconsistency of doing it on their own. Our approach is straightforward: design the display carefully, install it cleanly, support it during the season, and remove it efficiently when the holidays are over.
+          </p>
+          <p>
+            That makes us a strong fit for homeowners who want stress-free curb appeal and for businesses that need dependable holiday lighting service in St. Louis with a polished, professional result.
           </p>
         </div>
         <div class="about-panel reveal">
@@ -518,8 +602,12 @@
             <p>It is best to schedule early, before preferred installation dates are filled. Booking ahead helps ensure your property is ready before seasonal events, colder weather, and tighter holiday calendars arrive.</p>
           </details>
           <details class="faq-item reveal">
-            <summary>What areas outside St. Louis do you serve?</summary>
-            <p>GlowPro STL serves St. Louis and nearby communities including Chesterfield, Kirkwood, Webster Groves, Ballwin, Wildwood, St. Charles, Arnold, Fenton, and High Ridge.</p>
+            <summary>Do you provide Christmas light installation near Chesterfield, Kirkwood, and Webster Groves?</summary>
+            <p>Yes. GlowPro STL serves St. Louis and nearby communities including Chesterfield, Kirkwood, Webster Groves, Ballwin, Wildwood, St. Charles, Arnold, Fenton, and High Ridge.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>How long does professional Christmas light installation usually take?</summary>
+            <p>Most residential Christmas light installation projects can be completed within a day, while larger homes or commercial holiday lighting projects may take longer depending on the size and complexity of the display.</p>
           </details>
           <details class="faq-item reveal">
             <summary>Can you create custom Christmas light designs for my property?</summary>
@@ -535,7 +623,7 @@
 
     <section id="contact" class="contact-section section-spacing contact">
       <div class="container section-title text-center reveal">
-        <p class="eyebrow">Request a Free Quote</p>
+        <p class="eyebrow">Free Quote Request</p>
         <h2 class="fw-bold">Get a free Christmas light installation quote in St. Louis</h2>
         <p class="text-muted">Fill out the form below and our team will reach out within 1-2 business days to discuss your home or commercial holiday lighting project.</p>
       </div>
@@ -546,7 +634,7 @@
               <h3>Contact GlowPro STL</h3>
               <!-- SEO / NAP: Keep this contact information consistent with your Google Business Profile -->
               <p><strong>Phone:</strong> <a href="tel:+13146775011">(314) 677-5011</a></p>
-              <p><strong>Email:</strong> <a href="mailto:glowprostl@gmail.com">glowprostl@gmail.com</a></p>
+              <p><strong>Email:</strong> <a class="contact-email" href="mailto:glowprostl@gmail.com">glowprostl@gmail.com</a></p>
               <p><strong>Location:</strong> St. Louis, MO</p>
               <p><strong>Hours:</strong> Mon-Fri 8:00 AM-6:00 PM | Sat 9:00 AM-2:00 PM</p>
               <p class="contact-supporting">Looking for residential Christmas light installation, commercial holiday lighting, or holiday light takedown service in the St. Louis area? Start here.</p>
@@ -620,13 +708,38 @@
         </div>
       </div>
     </section>
+
+    <section class="social-section section-spacing" id="social">
+      <div class="container social-wrap reveal">
+        <div class="social-divider" aria-hidden="true"></div>
+        <div class="social-content">
+          <p class="eyebrow">Follow GlowPro STL</p>
+          <h2>Connect with us on Facebook and Instagram</h2>
+          <p>See recent holiday lighting projects, local updates, and seasonal inspiration from GlowPro STL in St. Louis.</p>
+          <div class="social-links" aria-label="GlowPro STL social links">
+            <a class="social-link" href="https://www.facebook.com/p/GlowPro-STL-100089183392519/" target="_blank" rel="noopener noreferrer" aria-label="GlowPro STL on Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13.5 21v-7.2h2.4l.36-2.8H13.5V9.23c0-.81.23-1.36 1.38-1.36h1.47V5.36c-.25-.03-1.12-.11-2.12-.11-2.1 0-3.54 1.28-3.54 3.64V11H8.37v2.8h2.37V21h2.76Z"/>
+              </svg>
+            </a>
+            <a class="social-link" href="https://www.instagram.com/glowprostl/" target="_blank" rel="noopener noreferrer" aria-label="GlowPro STL on Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7.75 3h8.5A4.75 4.75 0 0 1 21 7.75v8.5A4.75 4.75 0 0 1 16.25 21h-8.5A4.75 4.75 0 0 1 3 16.25v-8.5A4.75 4.75 0 0 1 7.75 3Zm0 1.5A3.25 3.25 0 0 0 4.5 7.75v8.5a3.25 3.25 0 0 0 3.25 3.25h8.5a3.25 3.25 0 0 0 3.25-3.25v-8.5a3.25 3.25 0 0 0-3.25-3.25h-8.5Zm8.88 1.12a1.13 1.13 0 1 1 0 2.25 1.13 1.13 0 0 1 0-2.25ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5A3.5 3.5 0 1 0 12 15.5 3.5 3.5 0 0 0 12 8.5Z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="social-divider" aria-hidden="true"></div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <a class="brand footer-brand" href="#top">GlowPro STL</a>
-        <img class="footer-logo" src="https://glowprostl.com/images/newLogo-removebg-preview.png" alt="GlowPro STL logo" loading="lazy" decoding="async">
+        <a class="brand footer-brand" href="#top" aria-label="GlowPro STL home">
+          <img class="footer-logo" src="https://glowprostl.com/images/newLogo-removebg-preview.png" alt="GlowPro STL logo" loading="lazy" decoding="async">
+        </a>
         <p>Premium Christmas light installation for homes and businesses throughout St. Louis, Missouri and nearby communities.</p>
       </div>
       <div>
@@ -641,7 +754,7 @@
       </div>
       <div>
         <h2>Contact</h2>
-        <p><strong>GlowPro STL</strong></p>
+    
         <p>St. Louis, MO</p>
         <p><a href="tel:+13146775011">(314) 677-5011</a></p>
         <p><a href="mailto:glowprostl@gmail.com">glowprostl@gmail.com</a></p>
@@ -649,8 +762,20 @@
     </div>
     <div class="container footer-bottom">
       <p>&copy; 2026 GlowPro STL. All rights reserved.</p>
+      <p class="developer-credit">Website design by John Rudolph</p>
     </div>
   </footer>
+
+  <div class="lightbox" id="galleryLightbox" aria-hidden="true" role="dialog" aria-label="Expanded gallery image">
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close expanded image">&times;</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button" aria-label="View previous image">&#10094;</button>
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" type="button" aria-label="View next image">&#10095;</button>
+      <img class="lightbox-image" id="lightboxImage" src="" alt="">
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

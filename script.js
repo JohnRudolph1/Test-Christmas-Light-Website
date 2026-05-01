@@ -7,6 +7,16 @@ const quoteForm = document.getElementById("quoteForm");
 const formStatus = document.getElementById("formStatus");
 const header = document.querySelector(".site-header");
 const pageSections = document.querySelectorAll("main section[id]");
+const galleryItems = document.querySelectorAll(".gallery-item");
+const lightbox = document.getElementById("galleryLightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const lightboxCaption = document.getElementById("lightboxCaption");
+const lightboxClose = document.getElementById("lightboxClose");
+const lightboxPrev = document.getElementById("lightboxPrev");
+const lightboxNext = document.getElementById("lightboxNext");
+const lightboxCloseTargets = document.querySelectorAll("[data-lightbox-close]");
+let galleryImageData = [];
+let activeGalleryIndex = -1;
 
 if (navToggle && siteNav) {
   navToggle.addEventListener("click", () => {
@@ -167,5 +177,105 @@ if (quoteForm && formStatus) {
     formStatus.textContent = "Sending your message...";
     formStatus.classList.remove("text-danger");
     formStatus.classList.add("success");
+  });
+}
+
+function closeLightbox() {
+  if (!lightbox || !lightboxImage || !lightboxCaption) {
+    return;
+  }
+
+  lightbox.classList.remove("is-open");
+  lightbox.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+  lightboxImage.src = "";
+  lightboxImage.alt = "";
+  lightboxCaption.textContent = "";
+  activeGalleryIndex = -1;
+}
+
+function renderLightboxImage(index) {
+  if (!galleryImageData.length || !lightboxImage || !lightboxCaption) {
+    return;
+  }
+
+  const boundedIndex = (index + galleryImageData.length) % galleryImageData.length;
+  const currentItem = galleryImageData[boundedIndex];
+
+  activeGalleryIndex = boundedIndex;
+  lightboxImage.src = currentItem.src;
+  lightboxImage.alt = currentItem.alt;
+  lightboxCaption.textContent = currentItem.caption;
+}
+
+if (
+  galleryItems.length &&
+  lightbox &&
+  lightboxImage &&
+  lightboxCaption &&
+  lightboxClose &&
+  lightboxPrev &&
+  lightboxNext
+) {
+  galleryItems.forEach((item) => {
+    const image = item.querySelector("img");
+    const caption = item.querySelector("figcaption");
+
+    if (!image) {
+      return;
+    }
+
+    item.setAttribute("tabindex", "0");
+    item.setAttribute("role", "button");
+    item.setAttribute("aria-label", `Expand image: ${image.alt}`);
+
+    const itemIndex = galleryImageData.push({
+      src: image.src,
+      alt: image.alt,
+      caption: caption ? caption.textContent : ""
+    }) - 1;
+
+    const openLightbox = () => {
+      renderLightboxImage(itemIndex);
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      lightboxClose.focus();
+    };
+
+    item.addEventListener("click", openLightbox);
+    item.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openLightbox();
+      }
+    });
+  });
+
+  lightboxClose.addEventListener("click", closeLightbox);
+  lightboxPrev.addEventListener("click", () => renderLightboxImage(activeGalleryIndex - 1));
+  lightboxNext.addEventListener("click", () => renderLightboxImage(activeGalleryIndex + 1));
+  lightboxCloseTargets.forEach((target) => {
+    target.addEventListener("click", closeLightbox);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (!lightbox.classList.contains("is-open")) {
+      return;
+    }
+
+    if (event.key === "Escape") {
+      closeLightbox();
+      return;
+    }
+
+    if (event.key === "ArrowLeft") {
+      renderLightboxImage(activeGalleryIndex - 1);
+      return;
+    }
+
+    if (event.key === "ArrowRight") {
+      renderLightboxImage(activeGalleryIndex + 1);
+    }
   });
 }
